@@ -8,6 +8,7 @@
     "dev": "parcel"
   },
   "dependencies": {
+    "@types/react": "^18.2.47",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1"

@@ -8,7 +8,7 @@ export const SikomobilityComBy = (): JSX.Element => {
           <div className="relative w-[1280px] h-[1120px] left-[128px]">
             <div className="absolute w-[896px] h-[96px] top-[64px] left-[192px]">
               <p className="absolute w-[833px] h-[101px] top-[-4px] left-[32px] [font-family:'Nunito_Sans',Helvetica] font-extrabold text-white text-[48px] text-center tracking-[0] leading-[48px]">
-                Découvrez notre gamme de services
+                Bonjour ! Découvrez notre gamme de services
                 <br />
                 pour toutes les mobilités
               </p>
