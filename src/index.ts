@@ -1,1 +1,1 @@
-export { SikomobilityComBy } from "./SikomobilityComBy";
+import { SikomobilityComBy } from './SikomobilityComBy';
