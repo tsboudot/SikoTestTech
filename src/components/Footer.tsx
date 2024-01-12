@@ -21,17 +21,18 @@ const Footer: React.FC = (): JSX.Element => {
     return (
         <footer className="flex flex-col bg-gray-600 p-4 text-white">
             <div className="up flex flex-row w-100%">
-                <div className="flex flex-col items-baseline sm:w-1/2 lg:w-full mx-auto">
-                    <div className="logo-container">
-                        <img src={logo} alt="logo" />
+                <div className="flex flex-col items-baseline sm:w-1/2 lg:w-full mx-auto pr-8">
+                    <div className="logo-container mb-2">
+                        <img className="mb-2" src={logo} alt="logo" />
                     </div>
-                    <div className="list-Container">
-                        <ul>
-                            <li>contact@sikoomobility</li>
-                            <li>86 rue Dutot, 75015 Paris</li>
-                            <li>Siko Mobility respecte les normes sociales et environnementales et s'inscrit dans une démarche de progrès.</li>
+                    <div className="list-Container flex ">
+                        <ul className="flex flex-col justify-between">
+                            <li className="mb-2">contact@sikoomobility</li>
+                            <li className="mb-3">86 rue Dutot, 75015 Paris</li>
+                            <li >Siko Mobility respecte les normes sociales et environnementales et s'inscrit dans une démarche de progrès.</li>
                         </ul>
                     </div>
+
                 </div>
                 <div className="flex  flex-row justify-between sm:w-1/2 lg:w-full mx-auto">
                     <FooterList {...list1} />

@@ -7,11 +7,11 @@ interface FooterListProps {
 
 const FooterList: React.FC<FooterListProps> = ({ title, items }: FooterListProps): JSX.Element => {
     return (
-        <div>
-            <h3>{title}</h3>
+        <div className="my-4">
+            <h3 className="mb-5">{title}</h3>
             <ul>
                 {items.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li className="mb-3" key={index}>{item}</li>
                 ))}
             </ul>
         </div>
