@@ -6,3 +6,8 @@
     all: unset;
   }
 }
+
+.logo-brightened {
+  filter: brightness(250%);
+
+}

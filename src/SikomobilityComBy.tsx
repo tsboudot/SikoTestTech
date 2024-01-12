@@ -1,14 +1,15 @@
 import * as React from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import "../tailwind.css";
 export const SikomobilityComBy: React.FC = (): JSX.Element => {
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen mx-auto">
 
       <Nav />
       {/* Main Content */}
-      <main className="flex-1 bg-gray-800 flex flex-row justify-center items-center">
+      <main className="flex-1 bg-gray-800 flex flex-row justify-center items-center ">
         <p className="text-white">Bonjour</p>
       </main>
 

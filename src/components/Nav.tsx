@@ -15,12 +15,12 @@ const Nav: React.FC = (): JSX.Element => {
             <div className="logo-container">
                 <img src={logo} alt="logo" />
             </div>
-            <ul className="flex space-x-4">
+            <ul className="flex space-x-4 justify-center items-center">
                 <li className="text-white">Espace Marchand</li>
-                <li className="text-white relative">
-                    <button onClick={handleDropdown}>
+                <li className="text-gray-100 relative">
+                    <li onClick={handleDropdown}>
                         Nos services
-                    </button>
+                    </li>
                     {servicesDropdown && (
                         <ul className="absolute bg-gray-600 mt-2 p-2">
                             <li className="text-white">Assurance</li>

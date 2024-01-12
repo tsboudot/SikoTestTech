@@ -21,8 +21,10 @@
     "htmlnano": "2.0.3",
     "parcel": "^2.8.0",
     "parcel-reporter-static-files-copy": "^1.5.0",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "postcss-preset-env": "^9.3.0",
     "process": "^0.11.10",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.4.1"
   }
 }
