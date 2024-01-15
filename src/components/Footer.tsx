@@ -23,7 +23,7 @@ const Footer: React.FC = (): JSX.Element => {
             <div className="up flex flex-row w-100%">
                 <div className="flex flex-col items-baseline sm:w-1/2 lg:w-full mx-auto pr-8">
                     <div className="logo-container mb-2">
-                        <img className="mb-2" src={logo} alt="logo" />
+                        <img className="mb-2 logo-brightened" src={logo} alt="logo" />
                     </div>
                     <div className="list-Container flex ">
                         <ul className="flex flex-col justify-between">

@@ -3,22 +3,40 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import MainSectionItem from "./components/MainSectionItem";
 import "../tailwind.css";
-export const SikomobilityComBy: React.FC = (): JSX.Element => {
+import paiementImage from "../public/images/Paiement-1c17143b.png";
+import mobiliteImage from "../public/images/Mobilite-9de2bf13.png";
+import financementImage from "../public/images/Financement-560da06b.png"
 
+export const SikomobilityComBy: React.FC = (): JSX.Element => {
   return (
-    <div className=" bg-gray-800 ">
+    <div className="bg-gray-800">
       <div className="flex bg-gray-800 flex-col min-h-screen mx-auto max-w-screen-xl">
 
         <Nav />
         {/* Section 1 */}
-        <section className="flex-1 bg-gray-800 flex flex-row justify-center items-center">
+        <section className="flex-1 bg-gray-800 flex flex-col justify-center items-center">
           <div className="up">
-            <h1>Découvrez notre gamme de services pour toutes les mobilités</h1>
+            <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full">Découvrez notre gamme de services pour toutes les mobilités</h1>
           </div>
-          <div className="down">
-            <MainSectionItem />
-            <MainSectionItem />
-            <MainSectionItem />
+          <div className="down flex flex-row gap-4 justify-center items-center w-full">
+            <MainSectionItem
+              title="PAIEMENT 3/4/10 FOIS"
+              backgroundImage={paiementImage}
+              text="Faites un paiement 3, 4 ou 10 fois en carte bleue. C'est sans justificatif"
+            />
+
+            <MainSectionItem
+              title="PAIEMENT 3/4/10 FOIS"
+              backgroundImage={financementImage}
+
+              text="Faites une demande de financement de 12 à 60 fois. Obtenez un accord d'une de nos banques partenaires."
+            />
+            <MainSectionItem
+              title="PAIEMENT 3/4/10 FOIS"
+              backgroundImage={mobiliteImage}
+              text="Souscrivez à un abonnement assurance, assistance, garantie ou maintenance. Sans engagement."
+            />
+            {/* ... (autres MainSectionItem) */}
           </div>
         </section>
 
@@ -29,12 +47,10 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
 
         {/* Section 3 */}
         <section className="flex-1 bg-gray-600 flex flex-row justify-center items-center">
-          <p className="text-white">Contenu de la Section 3</p>
+          <p className="text-white">Contenu de la Section 2</p>
         </section>
 
-
         <Footer />
-
 
         {/* Loader (à ajouter ou supprimer selon vos besoins) */}
         <div className="fixed top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-50 flex justify-center items-center">

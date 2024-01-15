@@ -11,7 +11,7 @@ const Nav: React.FC = (): JSX.Element => {
     };
 
     return (
-        <nav className="flex flex-row justify-between bg-gray-600 p-4">
+        <nav className="flex flex-row justify-between border-gray-600 p-4 order-b-2 z-50 sticky top-0">
             <div className="logo-container">
                 <img src={logo} alt="logo" />
             </div>

@@ -20,8 +20,8 @@ const MainSectionItem: React.FC<MainSectionItemProps> = ({
     };
 
     return (
-        <section className="flex-1" style={sectionStyle}>
-            <h2 className="text-4xl font-bold">{title}</h2>
+        <section className="relative block min-w-[256px] min-h-[256px] w-full h-[80vh] rounded-lg transition transform hover:scale-105 undefined" style={sectionStyle}>
+            <div className="justify-self-end"><h2 className="text-4xl font-bold">{title}</h2></div>
             <p className="text-lg">{text}</p>
         </section>
     );
