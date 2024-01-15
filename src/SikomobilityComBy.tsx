@@ -6,6 +6,7 @@ import "../tailwind.css";
 import paiementImage from "../public/images/Paiement-1c17143b.png";
 import mobiliteImage from "../public/images/Mobilite-9de2bf13.png";
 import financementImage from "../public/images/Financement-560da06b.png"
+import CarouselTweets from "./components/CarousselTweets";
 
 export const SikomobilityComBy: React.FC = (): JSX.Element => {
   return (
@@ -16,7 +17,7 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
         {/* Section 1 */}
         <section className="flex-1 bg-gray-800 flex flex-col justify-center items-center">
           <div className="up">
-            <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full">Découvrez notre gamme de services pour toutes les mobilités</h1>
+            <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full brightened">Découvrez notre gamme de services pour toutes les mobilités</h1>
           </div>
           <div className="down flex flex-row gap-4 justify-center items-center w-full">
             <MainSectionItem
@@ -41,13 +42,20 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
         </section>
 
         {/* Section 2 */}
-        <section className="flex-1 bg-gray-700 flex flex-row justify-center items-center">
-          <p className="text-white">Contenu de la Section 2</p>
+        <section className="sm:mx-auto bg-gray-dark">
+          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+            <h2 className="text-gray-900 text-white text-3xl md:text-5xl font-extrabold mb-8">Ils nous ont fait confiance !</h2>
+            <h2>A votre tour ! </h2>
+          </div>
+          <div>
+            <CarouselTweets />
+          </div>
         </section>
 
         {/* Section 3 */}
         <section className="flex-1 bg-gray-600 flex flex-row justify-center items-center">
           <p className="text-white">Contenu de la Section 2</p>
+
         </section>
 
         <Footer />

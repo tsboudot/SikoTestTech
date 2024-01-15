@@ -7,7 +7,22 @@
   }
 }
 
-.logo-brightened {
-  filter: brightness(250%);
+.brightened {
+  filter: brightness(150%);
 
+}
+
+
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  /* Permettre le défilement horizontal si nécessaire */
+}
+
+.slide {
+  /* Vos styles pour chaque tweet individuel */
+  min-width: 256px;
+  height: 70px;
+  /* Ajoutez une largeur minimale si nécessaire */
 }

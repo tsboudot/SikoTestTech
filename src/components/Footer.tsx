@@ -19,7 +19,7 @@ const Footer: React.FC = (): JSX.Element => {
     };
 
     return (
-        <footer className="flex flex-col bg-gray-600 p-4 text-white">
+        <footer className="flex flex-col p-4 text-white bg-gray-900 brightened">
             <div className="up flex flex-row w-100%">
                 <div className="flex flex-col items-baseline sm:w-1/2 lg:w-full mx-auto pr-8">
                     <div className="logo-container mb-2">
