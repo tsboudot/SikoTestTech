@@ -1,44 +1,11 @@
 // texts.ts
-import frTexts from './lang/fr.json';
-import enTexts from './lang/en.json';
+import db from './lang/db.json';
 
-const texts = {
-    fr: frTexts,
-    en: enTexts,
-} as const;
+export type Lang = 'fr' | 'en';
 
-export type NavSection = "nav";
-export type MainSection = "mainSection";
-export type SecondSection = "secondSection";
-export type FooterSection = "footer";
-
-export type Section = NavSection | MainSection | SecondSection | FooterSection;
-
-export type TextsObject = {
-    fr: {
-        [key in Section]: Record<string, string> | string;
-    };
-    en: {
-        [key in Section]: Record<string, string> | string;
-    };
+export const getTextByIdAndLang = (id: number, lang: Lang): string => {
+    const textObject = db[id.toString() as keyof typeof db]; // Utilise une assertion de type pour informer TypeScript que la clé est valide
+    return textObject ? textObject[lang] || '' : ''; // Renvoie le texte correspondant à la langue ou une chaîne vide si non trouvé
 };
 
-export type Lang = keyof TextsObject;
-export type TextKey = keyof TextsObject[Lang];
-
-export type TextsFunction = (lang: Lang, section: Section) => Record<string, string>;
-
-export const getTexts: TextsFunction = (lang, section) => {
-    // Vérifie si la langue et la section existent
-    if (texts[lang] && texts[lang][section]) {
-        const sectionData = texts[lang][section];
-
-        // Si la section est un objet, retourne cet objet, sinon retourne un objet vide
-        return typeof sectionData === 'object' ? sectionData : {};
-    }
-
-    // Si la langue ou la section n'existe pas, retourne un objet vide
-    return {};
-};
-
-export default texts;
+export default getTextByIdAndLang;

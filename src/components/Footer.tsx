@@ -1,21 +1,41 @@
 import * as React from "react";
 import logo from "../../public/images/logo.png";
 import FooterList from "./FooterList";
+import { RootState } from '../store';
+import { useSelector } from 'react-redux';
+import { getTextByIdAndLang, Lang } from '../texts';
 
 const Footer: React.FC = (): JSX.Element => {
+    const currentLanguage: Lang = useSelector((state: RootState) => state.lang.language as Lang);
+    const normesSociales = getTextByIdAndLang(17, currentLanguage)
     const list1 = {
-        title: "INFORMATIONS",
-        items: ["Mentions légales", "Conditions générales de vente", "Politique de confidentialité", "RGPD & Cookies"],
+        title: getTextByIdAndLang(18, currentLanguage), // "INFORMATIONS"
+        items: [
+            getTextByIdAndLang(19, currentLanguage), // "Mentions légales"
+            getTextByIdAndLang(20, currentLanguage), // "Conditions générales de vente"
+            getTextByIdAndLang(21, currentLanguage), // "Politique de confidentialité"
+            getTextByIdAndLang(22, currentLanguage), // "RGPD & Cookies"
+        ],
     };
 
     const list2 = {
-        title: "SIKO MOBILITY",
-        items: ["Acceuil", "Devenir Partenaire", "Qui sommes nous ? ", "Contact", "FAQ"],
+        title: getTextByIdAndLang(23, currentLanguage), // "INFORMATIONS"
+        items: [
+            getTextByIdAndLang(24, currentLanguage), // "Mentions légales"
+            getTextByIdAndLang(25, currentLanguage), // "Conditions générales de vente"
+            getTextByIdAndLang(26, currentLanguage), // "Politique de confidentialité"
+            getTextByIdAndLang(27, currentLanguage), // "RGPD & Cookies"
+        ],
     };
 
     const list3 = {
-        title: "NOS SERVICES",
-        items: ["Nos services", "Assurance", "Forfait entretien", "Assistance dépannage", "Garantie 3 ans"],
+        title: getTextByIdAndLang(28, currentLanguage), // "INFORMATIONS"
+        items: [
+            getTextByIdAndLang(29, currentLanguage), // "Mentions légales"
+            getTextByIdAndLang(30, currentLanguage), // "Conditions générales de vente"
+            getTextByIdAndLang(31, currentLanguage), // "Politique de confidentialité"
+            getTextByIdAndLang(32, currentLanguage), // "RGPD & Cookies"
+        ],
     };
 
     return (
@@ -29,7 +49,7 @@ const Footer: React.FC = (): JSX.Element => {
                         <ul className="flex flex-col justify-between">
                             <li className="mb-2">contact@sikoomobility</li>
                             <li className="mb-3">86 rue Dutot, 75015 Paris</li>
-                            <li >Siko Mobility respecte les normes sociales et environnementales et s'inscrit dans une démarche de progrès.</li>
+                            <li >{normesSociales}</li>
                         </ul>
                     </div>
 

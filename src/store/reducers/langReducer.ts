@@ -3,7 +3,7 @@ import { SET_LANGUAGE, LangAction, langState } from "../types";
 const localStorageLang = localStorage.getItem('language');
 
 const initialState: langState = {
-    language: localStorageLang ? localStorageLang : 'FR',
+    language: localStorageLang ? localStorageLang.toLowerCase() : 'fr',
 }
 
 const langReducer = (state = initialState, action: LangAction) => {

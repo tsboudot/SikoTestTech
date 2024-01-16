@@ -9,38 +9,41 @@ import financementImage from "../public/images/Financement-560da06b.png"
 import CarouselTweets from "./components/CarousselTweets";
 import { RootState } from './store';
 import { useSelector } from 'react-redux';
-import { getTexts, Lang, TextsFunction } from './texts'; // Assurez-vous d'avoir cette importation
+import { getTextByIdAndLang, Lang } from './texts'; // Assurez-vous d'avoir cette importationAssurez-vous d'avoir cette importation
 
 
 export const SikomobilityComBy: React.FC = (): JSX.Element => {
   const currentLanguage: Lang = useSelector((state: RootState) => state.lang.language as Lang);
+  const titre = getTextByIdAndLang(34, currentLanguage)
+  const confiance = getTextByIdAndLang(11, currentLanguage)
+  const tour = getTextByIdAndLang(12, currentLanguage)
   return (
     <div className="bg-gray-800">
       <div className="flex bg-gray-800 flex-col min-h-screen mx-auto max-w-screen-xl">
-
         <Nav />
+
         {/* Section 1 */}
         <section className="flex-1 bg-gray-800 flex flex-col justify-center items-center">
           <div className="up">
-            <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full brightened">Découvrez notre gamme de services pour toutes les mobilités</h1>
+            <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full brightened">{titre}</h1>
           </div>
           <div className="down flex flex-row gap-4 justify-center items-center w-full">
             <MainSectionItem
-              title="PAIEMENT 3/4/10 FOIS"
+              title={getTextByIdAndLang(5, currentLanguage)}
               backgroundImage={paiementImage}
-              text="Faites un paiement 3, 4 ou 10 fois en carte bleue. C'est sans justificatif"
+              text={getTextByIdAndLang(6, currentLanguage)}
             />
 
             <MainSectionItem
-              title="PAIEMENT 3/4/10 FOIS"
+              title={getTextByIdAndLang(7, currentLanguage)}
               backgroundImage={financementImage}
-
-              text="Faites une demande de financement de 12 à 60 fois. Obtenez un accord d'une de nos banques partenaires."
+              text={getTextByIdAndLang(8, currentLanguage)}
             />
+
             <MainSectionItem
-              title="PAIEMENT 3/4/10 FOIS"
+              title={getTextByIdAndLang(9, currentLanguage)}
               backgroundImage={mobiliteImage}
-              text="Souscrivez à un abonnement assurance, assistance, garantie ou maintenance. Sans engagement."
+              text={getTextByIdAndLang(10, currentLanguage)}
             />
             {/* ... (autres MainSectionItem) */}
           </div>
@@ -49,8 +52,8 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
         {/* Section 2 */}
         <section className="sm:mx-auto bg-gray-dark">
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-            <h2 className="text-gray-900 text-white text-3xl md:text-5xl font-extrabold mb-8">Ils nous ont fait confiance !</h2>
-            <h2>A votre tour ! </h2>
+            <h2 className="text-gray-900 text-white text-3xl md:text-5xl font-extrabold mb-8">{confiance}</h2>
+            <h2>{tour}</h2>
           </div>
           <div>
             <CarouselTweets />

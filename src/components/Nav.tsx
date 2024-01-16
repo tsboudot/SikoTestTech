@@ -4,7 +4,7 @@ import logo from "../../public/images/logo.png";
 import LanguageSwitcher from "./switchLang";
 import { RootState } from '../store';
 import { useSelector } from 'react-redux';
-import { getTexts, Lang, TextsFunction } from '../texts'; // Assurez-vous d'avoir cette importation
+import { getTextByIdAndLang, Lang } from '../texts'; // Assurez-vous d'avoir cette importation
 
 const Nav: React.FC = (): JSX.Element => {
     const [servicesDropdown, setServicesDropdown] = useState<boolean>(false);
@@ -15,7 +15,11 @@ const Nav: React.FC = (): JSX.Element => {
     };
 
     const currentLanguage: Lang = useSelector((state: RootState) => state.lang.language as Lang);
-    const navText = getTexts(currentLanguage, "nav"); // Obtenez les textes de la section "nav"
+
+    // Utilisez la fonction getTextByIdAndLang pour obtenir le texte du composant numéro 1
+    const commercialSpaceText = getTextByIdAndLang(1, currentLanguage);
+    const nosServices = getTextByIdAndLang(2, currentLanguage)
+
     return (
         <nav className="flex flex-row justify-between border-gray-600 p-4 order-b-2 z-50 sticky top-0">
             <div className="logo-container">
@@ -23,10 +27,11 @@ const Nav: React.FC = (): JSX.Element => {
             </div>
 
             <ul className="flex space-x-4 justify-center items-center">
-                <li className="text-white">{navText.commercialSpace}</li>
+                {/* Utilisez la variable commercialSpaceText ici */}
+                <li className="text-white">{commercialSpaceText}</li>
                 <li className="text-gray-100 relative">
                     <li onClick={handleDropdown}>
-                        Nos services
+                        {nosServices}
                     </li>
                     {servicesDropdown && (
                         <ul className="absolute bg-gray-600 mt-2 p-2">
