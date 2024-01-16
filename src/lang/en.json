@@ -1,17 +1,23 @@
 {
     "nav": {
-        "commercialSpace": "commercialSpace",
+        "commercialSpace": "Market place",
         "ourServices": "our Services",
         "simulation": "simulation",
         "discoverRangeOfServices": "Discover our range of services"
     },
     "mainSection": {
-        "paymentInstallments": "PAYMENT IN 3/4/10 INSTALLMENTS",
-        "paymentInstallmentsDescription": "Make a payment in 3, 4, or 10 installments using a credit card. No documentation required.",
-        "financing12To60Months": "FINANCING 12 TO 60 MONTHS",
-        "financing12To60MonthsDescription": "Apply for financing over a period of 12 to 60 months. Get approval from one of our partner banks.",
-        "mobilityPackages": "MOBILITY PACKAGES",
-        "mobilityPackagesDescription": "Subscribe to an insurance, assistance, warranty, or maintenance plan. No commitment required."
+        "PAYMENT IN 3/4/10 INSTALLMENTS": {
+            "title": "PAYMENT IN 3/4/10 INSTALLMENTS",
+            "text": "Make a payment in 3, 4, or 10 installments using a credit card. No documentation required."
+        },
+        "FINANCING 12 TO 60 MONTHS": {
+            "tittle": "FINANCING 12 TO 60 MONTHS",
+            "text": "Apply for financing over a period of 12 to 60 months. Get approval from one of our partner banks."
+        },
+        "MOBILITY PACKAGES": {
+            "title": "MOBILITY PACKAGES",
+            "text": "Subscribe to an insurance, assistance, warranty, or maintenance plan. No commitment required."
+        }
     },
     "secondSection": {
         "theyTrustUs": "They trusted us!",

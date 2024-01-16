@@ -16,27 +16,29 @@ export type Section = NavSection | MainSection | SecondSection | FooterSection;
 
 export type TextsObject = {
     fr: {
-        [key in Section]: Record<string, string>;
+        [key in Section]: Record<string, string> | string;
     };
     en: {
-        [key in Section]: Record<string, string>;
+        [key in Section]: Record<string, string> | string;
     };
 };
 
 export type Lang = keyof TextsObject;
 export type TextKey = keyof TextsObject[Lang];
 
-export type TextsFunction = (lang: Lang, section: Section) => TextsObject[Lang][Section];
+export type TextsFunction = (lang: Lang, section: Section) => Record<string, string>;
 
 export const getTexts: TextsFunction = (lang, section) => {
     // Vérifie si la langue et la section existent
     if (texts[lang] && texts[lang][section]) {
-        return texts[lang][section];
+        const sectionData = texts[lang][section];
+
+        // Si la section est un objet, retourne cet objet, sinon retourne un objet vide
+        return typeof sectionData === 'object' ? sectionData : {};
     }
 
     // Si la langue ou la section n'existe pas, retourne un objet vide
-    return {} as TextsObject[Lang][Section];
+    return {};
 };
 
 export default texts;
-

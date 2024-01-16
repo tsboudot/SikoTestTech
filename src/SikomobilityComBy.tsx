@@ -7,8 +7,13 @@ import paiementImage from "../public/images/Paiement-1c17143b.png";
 import mobiliteImage from "../public/images/Mobilite-9de2bf13.png";
 import financementImage from "../public/images/Financement-560da06b.png"
 import CarouselTweets from "./components/CarousselTweets";
+import { RootState } from './store';
+import { useSelector } from 'react-redux';
+import { getTexts, Lang, TextsFunction } from './texts'; // Assurez-vous d'avoir cette importation
+
 
 export const SikomobilityComBy: React.FC = (): JSX.Element => {
+  const currentLanguage: Lang = useSelector((state: RootState) => state.lang.language as Lang);
   return (
     <div className="bg-gray-800">
       <div className="flex bg-gray-800 flex-col min-h-screen mx-auto max-w-screen-xl">
