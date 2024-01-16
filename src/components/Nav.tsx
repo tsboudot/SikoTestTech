@@ -15,8 +15,7 @@ const Nav: React.FC = (): JSX.Element => {
     };
 
     const currentLanguage: Lang = useSelector((state: RootState) => state.lang.language as Lang);
-    const result = getTexts(currentLanguage);
-
+    const navText = getTexts(currentLanguage, "nav"); // Obtenez les textes de la section "nav"
     return (
         <nav className="flex flex-row justify-between border-gray-600 p-4 order-b-2 z-50 sticky top-0">
             <div className="logo-container">
@@ -24,7 +23,7 @@ const Nav: React.FC = (): JSX.Element => {
             </div>
 
             <ul className="flex space-x-4 justify-center items-center">
-                <li className="text-white">Espace Marchand</li>
+                <li className="text-white">{navText.commercialSpace}</li>
                 <li className="text-gray-100 relative">
                     <li onClick={handleDropdown}>
                         Nos services
