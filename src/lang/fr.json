@@ -6,18 +6,12 @@
         "Discover our range of services": "Découvrez notre gamme de services"
     },
     "mainSection": {
-        "PAYMENT IN 3/4/10 INSTALLMENTS": {
-            "title": "PAIEMENT EN 3 / 4 / 10 FOIS.",
-            "text": "Faites un paiement en 3, 4 ou 10 fois en carte bleue. C'est sans justificatif."
-        },
-        "FINANCING 12 TO 60 MONTHS": {
-            "tittle": "FINANCEMENT 12 A 60 MOIS",
-            "text": "Faites une demande de financement de 12 à 60 fois. Obtenez un accord d'une de nos banques partenaires."
-        },
-        "MOBILITY PACKAGES": {
-            "title": "FORFAITS MOBILITÉ",
-            "text": "Souscrivez à un abonnement assurance, assistance, garantie ou maintenance. Sans engagement."
-        }
+        "PAYMENT IN 3/4/10 INSTALLMENTS": "PAIEMENT EN 3 / 4 / 10 FOIS.",
+        "Make a payment in 3, 4, or 10 installments using a credit card. No documentation required.": "Faites un paiement en 3, 4 ou 10 fois en carte bleue. C'est sans justificatif.",
+        "FINANCING 12 TO 60 MONTHS": "FINANCEMENT 12 A 60 MOIS",
+        "Apply for financing over a period of 12 to 60 months. Get approval from one of our partner banks.": "Faites une demande de financement de 12 à 60 fois. Obtenez un accord d'une de nos banques partenaires.",
+        "MOBILITY PACKAGES": "FORFAITS MOBILITÉ",
+        "Subscribe to an insurance, assistance, warranty, or maintenance plan. No commitment required.": "Souscrivez à un abonnement assurance, assistance, garantie ou maintenance. Sans engagement."
     },
     "secondSection": {
         "They trust us!": "Ils nous ont fait confiance !",
