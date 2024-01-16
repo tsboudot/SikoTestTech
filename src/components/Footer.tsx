@@ -47,7 +47,9 @@ const Footer: React.FC = (): JSX.Element => {
                     </div>
                     <div className="list-Container flex ">
                         <ul className="flex flex-col justify-between">
-                            <li className="mb-2">contact@sikoomobility</li>
+                            <li className="mb-2">
+                                <a href="mailto:contact@sikomobility" className="text-blue-500 hover:underline">contact@sikomobility</a>
+                            </li>
                             <li className="mb-3">86 rue Dutot, 75015 Paris</li>
                             <li >{normesSociales}</li>
                         </ul>
