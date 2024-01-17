@@ -23,7 +23,7 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
         <Nav />
 
         {/* Section 1 */}
-        <section className="flex-1 bg-gray-800 flex flex-col justify-center items-center">
+        <section className="flex-1 bg-gray-800 flex flex-col justify-center items-center text-gray-300">
           <div className="up">
             <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full z-50">{titre}</h1>
           </div>
@@ -69,7 +69,7 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
         <Footer />
 
         {/* Loader (à ajouter ou supprimer selon vos besoins) */}
-        <div className="fixed top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-50 flex justify-center items-center">
+        <div className="fixed top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-10 flex justify-center items-center">
           <div className="spinner-border text-white" role="status">
             <span className="sr-only">Chargement...</span>
           </div>
