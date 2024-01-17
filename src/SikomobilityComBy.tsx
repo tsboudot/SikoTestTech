@@ -9,7 +9,7 @@ import financementImage from "../public/images/Financement-560da06b.png"
 import CarouselTweets from "./components/CarousselTweets";
 import { RootState } from './store';
 import { useSelector } from 'react-redux';
-import { getTextByIdAndLang, Lang } from './texts'; // Assurez-vous d'avoir cette importationAssurez-vous d'avoir cette importation
+import { getTextByIdAndLang, Lang } from './texts';
 
 
 export const SikomobilityComBy: React.FC = (): JSX.Element => {
@@ -25,7 +25,7 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
         {/* Section 1 */}
         <section className="flex-1 bg-gray-800 flex flex-col justify-center items-center">
           <div className="up">
-            <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full brightened">{titre}</h1>
+            <h1 className="text-white lg:text-center text-3xl md:text-5xl font-extrabold mb-8 max-w-4xl w-full z-50">{titre}</h1>
           </div>
           <div className="down flex flex-row gap-4 justify-center items-center w-full">
             <MainSectionItem

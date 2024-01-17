@@ -5,6 +5,8 @@ import { RootState } from '../store';
 import { useSelector } from 'react-redux';
 import { getTextByIdAndLang, Lang } from '../texts';
 
+
+
 const Footer: React.FC = (): JSX.Element => {
     const currentLanguage: Lang = useSelector((state: RootState) => state.lang.language as Lang);
     const normesSociales = getTextByIdAndLang(17, currentLanguage)
@@ -39,7 +41,7 @@ const Footer: React.FC = (): JSX.Element => {
     };
 
     return (
-        <footer className="flex flex-col p-4 text-white bg-gray-900 brightened">
+        <footer className="flex flex-col p-4 text-white bg-gray-900 z-50">
             <div className="up flex flex-row w-100%">
                 <div className="flex flex-col items-baseline sm:w-1/2 lg:w-full mx-auto pr-8">
                     <div className="logo-container mb-2">

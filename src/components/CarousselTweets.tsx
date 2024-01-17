@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the styles
+import { useMediaQuery } from 'react-responsive';
+
 
 // Exemple de données
 const tweetsData = [
@@ -56,54 +60,42 @@ const tweetsData = [
         author: "Auteur 1",
         date: "2022-01-15",
     },
-    // ... Ajoutez autant d'objets de tweet que nécessaire
+
 ];
 
 const CarouselTweets: React.FC = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % tweetsData.length);
-    };
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + tweetsData.length) % tweetsData.length);
-    };
-
-    useEffect(() => {
-        // Défilement automatique toutes les 30 secondes
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % tweetsData.length);
-        }, 3000);
-
-        // Nettoyer l'intervalle lors du démontage du composant
-        return () => clearInterval(interval);
-    }, []);
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const tweetsToShow = isMobile ? 2 : 3;
 
     return (
         <div className="carousel-container">
-            <div className="carousel flex flex-wrap justify-center">
-                {tweetsData.map((tweet, index) => (
-                    <div
-                        key={tweet.id}
-                        className={`slide ${index === currentIndex ? "active" : ""} ${index === currentIndex ? "sm:w-full md:w-1/2 lg:w-1/3" : "sm:w-1/2 md:w-1/3 lg:w-1/4"
-                            }`}
-                    >
-                        <h2 className="text-red">{tweet.title}</h2>
-                        <p className="text-red">{tweet.text}</p>
-                        <div className="ratings">
-                            <div className="rating-stars">Rating: {tweet.ratingStars} stars</div>
-                            <div className="rating-numbers">
-                                Likes: {tweet.ratingNumbers.likes} | Retweets: {tweet.ratingNumbers.retweets}
-                            </div>
-                        </div>
-                        <div className="author-date">
-                            <p>{tweet.author}</p>
-                            <p>{tweet.date}</p>
-                        </div>
+            <Carousel
+                showThumbs={false}
+                infiniteLoop
+                autoPlay
+                className="w-full"
+                renderIndicator={(onClickHandler, isSelected, index, label) => {
+                    const indicatorClasses = `inline-block h-4 w-4 mx-2 rounded-full ${isSelected ? 'bg-blue-500 cursor-pointer' : 'bg-gray-300 cursor-pointer'}`;
+                    return (
+                        <li
+                            className={indicatorClasses}
+                            onClick={onClickHandler}
+                            onKeyDown={onClickHandler}
+                            role="button"
+                            tabIndex={0}
+                            title={`${label}: ${index + 1}`}
+                        />
+                    );
+                }}
+            >
+                {tweetsData.slice(0, tweetsToShow).map(tweet => (
+                    <div key={tweet.id} className="carousel-box bg-white p-8 rounded shadow-md">
+                        <h3 className="text-xl font-bold mb-4">{tweet.title}</h3>
+                        <p className="text-gray-700 mb-2">{tweet.text}</p>
+                        <p className="text-gray-500">Author: {tweet.author}</p>
                     </div>
                 ))}
-            </div>
+            </Carousel>
         </div>
     );
 };
