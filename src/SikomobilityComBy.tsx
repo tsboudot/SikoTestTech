@@ -52,23 +52,18 @@ export const SikomobilityComBy: React.FC = (): JSX.Element => {
         {/* Section 2 */}
         <section className="sm:mx-auto bg-gray-dark">
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-            <h2 className="text-gray-900 text-white text-3xl md:text-5xl font-extrabold mb-8">{confiance}</h2>
-            <h2>{tour}</h2>
+            <h2 className="text-white text-3xl md:text-5xl font-extrabold mb-8">{confiance}</h2>
+            <h2 className="text-white md:text-2xl font-extrabold mb-8">{tour}</h2>
           </div>
           <div>
             <CarouselTweets />
           </div>
         </section>
 
-        {/* Section 3 */}
-        <section className="flex-1 bg-gray-600 flex flex-row justify-center items-center">
-          <p className="text-white">Contenu de la Section 2</p>
-
-        </section>
 
         <Footer />
 
-        {/* Loader (à ajouter ou supprimer selon vos besoins) */}
+
         <div className="fixed top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-10 flex justify-center items-center">
           <div className="spinner-border text-white" role="status">
             <span className="sr-only">Chargement...</span>
